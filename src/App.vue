@@ -1,48 +1,42 @@
 <template>
-    <nav>
-        <router-link to="/">Главная</router-link>
-
-        <router-link to="/mochi">Моти</router-link>
-        <router-link to="/cafe">Кофейня</router-link>
-        <router-link to="/contacts">Контакты</router-link>
-        <router-link to="/about">О нас</router-link>
-        <router-link to="/promo">Акции</router-link>
-
-        <router-link to="/cart">Корзина</router-link>
+    <nav class="navbar__btns">
+        <button @click="$router.push('/')" style="margin-left: 20px;"> Главная</button>
+        <button @click="$router.push('/mochi')" style="margin-left: 20px;"> Моти</button>
+        <button @click="$router.push('/cafe')" style="margin-left: 20px;"> Кофейня</button>
+        <button @click="$router.push('/promo')" style="margin-left: 20px;"> Акции</button>
+        <button @click="$router.push('/about')" style="margin-left: 20px;"> О нас</button>
+        <button @click="$router.push('/contacts')" style="margin-left: 20px;"> Контакты</button>
+        <button @click="$router.push('/cart')" style="margin-left: 20px;"> Корзина</button>
     </nav>
-    <router-view/>
+    <div class="app">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-export default {}
+
+export default {
+}
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-  height: 50px;
-  background: lightcyan;
-  box-shadow: 2px 2px 4px gray;
-  display: flex;
-  align-items: center;
-  //padding: 0 15px;
+.app {
+    padding: 20px;
+}
 
-  padding: 30px;
+.navbar__btns {
+    height: 50px;
+    background: lightcyan;
+    box-shadow: 2px 2px 4px gray;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

@@ -45,7 +45,7 @@ const routes = [
     component: CartPage
   },
   {
-    path: '*',
+    path: '/:CatchAll(.*)',
     name: 'error404',
     component: ErrorPage
   }
