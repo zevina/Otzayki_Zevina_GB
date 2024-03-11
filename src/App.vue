@@ -1,10 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <nav>
+        <router-link to="/">Главная</router-link>
+
+        <router-link to="/mochi">Моти</router-link>
+        <router-link to="/cafe">Кофейня</router-link>
+        <router-link to="/contacts">Контакты</router-link>
+        <router-link to="/about">О нас</router-link>
+        <router-link to="/promo">Акции</router-link>
+
+        <router-link to="/cart">Корзина</router-link>
+    </nav>
+    <router-view/>
 </template>
+
+<script>
+export default {}
+</script>
 
 <style lang="scss">
 #app {
@@ -16,6 +27,13 @@
 }
 
 nav {
+  height: 50px;
+  background: lightcyan;
+  box-shadow: 2px 2px 4px gray;
+  display: flex;
+  align-items: center;
+  //padding: 0 15px;
+
   padding: 30px;
 
   a {
