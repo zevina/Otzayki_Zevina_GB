@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Blackberry';
+  src: local('Blackberry'),
+  url('~@/assets/fonts/blackberry/blackberry.woff2') format('woff2'),
+  url('~@/assets/fonts/blackberry/blackberry.woff') format('woff'),
+  url('~@/assets/fonts/blackberry/blackberry.ttf') format('ttf'),
+  url('~@/assets/fonts/blackberry/blackberry.eot');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost'),
+  url('~@/assets/fonts/jost/Jost-Regular.woff2') format('woff2'),
+  url('~@/assets/fonts/jost/Jost-Regular.woff') format('woff'),
+  url('~@/assets/fonts/jost/Jost-Regular.ttf') format('ttf'),
+  url('~@/assets/fonts/jost/Jost-Regular.eot');
+
+  font-weight: normal; // 400
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost'),
+  url('~@/assets/fonts/jost/Jost-SemiBold.woff2') format('woff2'),
+  url('~@/assets/fonts/jost/Jost-SemiBold.woff') format('woff'),
+  url('~@/assets/fonts/jost/Jost-SemiBold.ttf') format('ttf'),
+  url('~@/assets/fonts/jost/Jost-SemiBold.eot');
+
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost'),
+  url('~@/assets/fonts/jost/Jost-Bold.woff2') format('woff2'),
+  url('~@/assets/fonts/jost/Jost-Bold.woff') format('woff'),
+  url('~@/assets/fonts/jost/Jost-Bold.ttf') format('ttf'),
+  url('~@/assets/fonts/jost/Jost-Bold.eot');
+
+  font-weight: bold; // 700
+  font-style: normal;
+}

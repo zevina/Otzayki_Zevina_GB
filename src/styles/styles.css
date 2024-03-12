@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  color: #381717;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.center {
+  padding-left: calc(50% - 960px);
+  padding-right: calc(50% - 960px);
+}
+
+.hidden {
+  display: none;
+}
+
+.text_italic {
+  font-style: italic;
+}
+
+.accent_text {
+  color: #ca6969;
+}
+
+.on-top-btn {
+  display: block;
+  position: fixed;
+  z-index: 11;
+  bottom: 85px;
+  right: 10px;
+  padding: 15px;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #ca6969;
+}
+.on-top-btn:hover {
+  cursor: pointer;
+  filter: brightness(1.2) saturate(1.5);
+  transition: all 0.3s;
+}
+
+@font-face {
+  font-family: "Blackberry";
+  src: local("Blackberry"), url("~@/assets/fonts/blackberry/blackberry.woff2") format("woff2"), url("~@/assets/fonts/blackberry/blackberry.woff") format("woff"), url("~@/assets/fonts/blackberry/blackberry.ttf") format("ttf"), url("~@/assets/fonts/blackberry/blackberry.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: local("Jost"), url("~@/assets/fonts/jost/Jost-Regular.woff2") format("woff2"), url("~@/assets/fonts/jost/Jost-Regular.woff") format("woff"), url("~@/assets/fonts/jost/Jost-Regular.ttf") format("ttf"), url("~@/assets/fonts/jost/Jost-Regular.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: local("Jost"), url("~@/assets/fonts/jost/Jost-SemiBold.woff2") format("woff2"), url("~@/assets/fonts/jost/Jost-SemiBold.woff") format("woff"), url("~@/assets/fonts/jost/Jost-SemiBold.ttf") format("ttf"), url("~@/assets/fonts/jost/Jost-SemiBold.eot");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: local("Jost"), url("~@/assets/fonts/jost/Jost-Bold.woff2") format("woff2"), url("~@/assets/fonts/jost/Jost-Bold.woff") format("woff"), url("~@/assets/fonts/jost/Jost-Bold.ttf") format("ttf"), url("~@/assets/fonts/jost/Jost-Bold.eot");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=styles.css.map */
