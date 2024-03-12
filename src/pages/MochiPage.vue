@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Mochi</h1>
+    <div class="center">
+        <h1 style="text-align: center">Mochi</h1>
     </div>
 </template>
 

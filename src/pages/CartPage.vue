@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Cart</h1>
+    <div class="center">
+        <h1 style="text-align: center">Cart</h1>
     </div>
 </template>
 

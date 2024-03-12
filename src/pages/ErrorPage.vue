@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>404</h1>
+    <div class="center">
+        <h1 style="text-align: center">404</h1>
     </div>
 </template>
 

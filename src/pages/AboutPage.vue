@@ -1,6 +1,6 @@
 <template>
-    <div class="about">
-        <h1>About</h1>
+    <div class="center">
+        <h1 style="text-align: center">About</h1>
     </div>
 </template>
 

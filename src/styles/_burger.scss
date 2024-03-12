@@ -1,0 +1,35 @@
+@import "vars";
+
+.burger__button {
+  padding: 20px;
+  height: 80px;
+
+  &_img {
+    fill: white;
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  flex-direction: column;
+  top: 80px;
+  width: 100vw;
+  padding: 32px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.21);
+  background: white;
+  z-index: 111;
+  list-style: none;
+  transition: all 0.5s;
+
+  &__item {
+    padding: 7px 0;
+  }
+
+  &__item a {
+    color: $pink-600;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-left: 30px;
+  }
+}

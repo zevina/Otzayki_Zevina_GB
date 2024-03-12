@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Contacts</h1>
+    <div class="center">
+        <h1 style="text-align: center">Contacts</h1>
     </div>
 </template>
 
