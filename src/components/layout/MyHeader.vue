@@ -48,6 +48,7 @@
 import BurgerMenu from "@/components/UI/BurgerMenu.vue";
 
 export default {
+    name: 'my-header',
     components: {BurgerMenu}
 }
 </script>

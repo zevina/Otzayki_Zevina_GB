@@ -3,7 +3,7 @@
 
 // Desktop view
 .header {
-  min-height: 200px;
+  min-height: 180px;
   background: $pink-500;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@
   transition: all 0.4s;
 
   &:hover {
-    color: $pink-900;
+    color: $pink-300;
   }
 }
 

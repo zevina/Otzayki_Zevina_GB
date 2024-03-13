@@ -1,0 +1,150 @@
+@import "vars";
+@import "fonts";
+
+// text styles
+@mixin header-large($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 122px;
+  line-height: 123%;
+}
+
+@mixin header-1($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 108px;
+  line-height: 111%;
+}
+
+@mixin header-2($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 88px;
+  line-height: 120%;
+}
+
+@mixin header-3($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 78px;
+  line-height: 92%;
+}
+
+@mixin header-4($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 48px;
+  line-height: 133%;
+}
+
+@mixin header-5($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+@mixin header-6($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 26px;
+  line-height: 185%;
+}
+
+@mixin widgets-title($color) {
+  color: $color;
+  font-family: 'blackberry', serif;
+  font-size: 20px;
+  line-height: 126%;
+}
+
+@mixin widgets-text($color) {
+  color: $color;
+  font-size: 18px;
+  line-height: 139%;
+  letter-spacing: 0.02em;
+}
+
+@mixin widgets-comments($color) {
+  color: $color;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+@mixin heading($color) {
+  color: $color;
+  font-weight: bold;
+  font-size: 118px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@mixin nav-item($color) {
+  color: $color;
+  font-weight: 600;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+@mixin nav-item-t($color) {
+  color: $color;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@mixin nav-subitem($color) {
+  color: $color;
+  font-size: 24px;
+}
+
+@mixin body-text-24($color) {
+  color: $color;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+
+@mixin body-text-18($color) {
+  color: $color;
+  font-size: 18px;
+}
+
+@mixin body-bold($color) {
+  color: $color;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+
+@mixin body-semibold($color) {
+  color: $color;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48%;
+  letter-spacing: 0.02em;
+}
+
+@mixin body-cap($color) {
+  color: $color;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@mixin body-cap-30($color) {
+  color: $color;
+  font-size: 30px;
+  line-height: 60%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@mixin label($color) {
+  color: $color;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
