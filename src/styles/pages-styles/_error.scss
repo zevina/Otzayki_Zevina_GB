@@ -1,0 +1,36 @@
+@import "../vars";
+@import "../fonts";
+@import "../mixins";
+
+.bg-img {
+  background-color: #0e0e0e;
+
+}
+
+.top {
+
+  &__bg {
+    width: 100%;
+  }
+}
+
+
+// Desktop view - middle point
+@media (max-width: 1640px) {
+
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+
+}
+
+// Mobile view
+@media (max-width: 960px) {
+
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+
+}

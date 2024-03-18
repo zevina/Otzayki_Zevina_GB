@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 140px;
+  margin-right: 10px;
   min-height: 182px;
 
   &__title {
@@ -57,7 +57,7 @@
 
 
 // Desktop view - middle point
-@media (max-width: 1640px) {
+@media (max-width: 1644px) {
   .subscribe-form {
     margin-right: 100px;
 

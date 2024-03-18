@@ -24,7 +24,7 @@
   align-items: start;
 
   &__logo {
-    margin-left: 140px;
+    margin-left: 10px;
   }
 
   &__contacts {
@@ -51,7 +51,7 @@
   align-items: center;
 
   &__copyright {
-    margin-left: 140px;
+    margin-left: 10px;
 
     &_text {
       @include body-text-24(white);
@@ -63,7 +63,7 @@
   }
 
   &__social {
-    margin-right: 140px;
+    margin-right: 10px;
 
     &_list {
       list-style-type: none;
@@ -83,7 +83,7 @@
 }
 
 // Desktop view - middle point
-@media (max-width: 1640px) {
+@media (max-width: 1644px) {
   .footer-up {
     &__logo {
       margin-left: 100px;
@@ -95,6 +95,16 @@
 
     &__contacts {
       max-width: 200px;
+    }
+  }
+
+  .footer-down {
+    &__copyright {
+      margin-left: 100px;
+    }
+
+    &__social {
+      margin-right: 100px;
     }
   }
 }

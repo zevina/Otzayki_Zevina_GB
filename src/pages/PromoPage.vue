@@ -1,6 +1,14 @@
 <template>
     <div class="center">
-        <h1 style="text-align: center">Promo</h1>
+        <section class="top center">
+            <div class="top__img">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset='@/assets/img/promo/promo_bg_big.png'>
+                    <source media="(min-width: 960px)" srcset='@/assets/img/promo/promo_bg_middle.png'>
+                    <img class="top__bg" alt="photo of desserts" src='@/assets/img/promo/promo_bg_small.png'>
+                </picture>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -11,5 +19,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import "@/styles/pages-styles/promo";
 </style>

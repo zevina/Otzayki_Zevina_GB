@@ -1,0 +1,926 @@
+@import "../vars";
+@import "../fonts";
+@import "../mixins";
+
+.pink-bg {
+  background-color: $pink-500;
+}
+
+.top {
+  margin-bottom: 114px;
+  width: 100%;
+
+  &__img {
+    text-align: center;
+  }
+
+  &__bg {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.top-info {
+  min-height: 1120px;
+  background-image: url("@/assets/img/home/main_down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+
+  &__content {
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    padding-bottom: 180px;
+  }
+
+  &__img1 {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  &__img2 {
+    width: 100%;
+  }
+
+  &__title {
+    @include header-3(white);
+    max-width: 780px;
+    margin-bottom: 60px;
+  }
+
+  &__text1 {
+    @include body-text-24(white);
+    max-width: 780px;
+  }
+
+  &__text2 {
+    @include body-text-24(white);
+    max-width: 508px;
+    padding-top: 240px;
+    margin-bottom: 84px;
+  }
+}
+
+.menu {
+  //background-image: url("@/assets/img/home/evcalipt_big.png");
+  //background-repeat: no-repeat;
+  //background-position-x: right;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__content {
+    padding-top: 350px;
+    margin: 0 15px 110px;
+    display: flex;
+
+    &_left {
+      width: 60%;
+    }
+
+    &_right {
+      padding-top: 180px;
+    }
+  }
+
+  &__title {
+    @include header-1(black);
+    margin-bottom: 120px;
+  }
+
+  &__text {
+    @include body-semibold(black);
+    margin-bottom: 60px;
+    max-width: 672px;
+  }
+
+  &__price {
+    @include header-4(black);
+  }
+
+  &__list {
+    list-style-type: disc;
+    @include body-cap-30($pink-950);
+    padding-left: 45px;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    @include btn($pink-950);
+    @include header-4($pink-950);
+    font-size: 40px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $pink-50;
+      border-color: $pink-700;
+    }
+  }
+}
+
+.cafe {
+  background-color: $pink-100;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+    &_left {
+      margin-top: -280px;
+      max-width: 800px;
+      background-image: url("@/assets/img/home/shadow.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+    }
+
+    &_right {
+      max-width: 650px;
+    }
+
+    &_title {
+      @include header-3($pink-950);
+      padding-top: 100px;
+      margin-bottom: 36px;
+    }
+
+    &_text {
+      @include body-semibold($pink-950);
+      margin-bottom: 28px;
+    }
+
+    &_address {
+      @include header-4($pink-950);
+    }
+  }
+
+  &__video {
+    padding: 45px;
+    border-radius: 100px;
+    max-width: 710px;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin: 0 15px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 0;
+
+  &__img {
+    max-width: 260px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include header-4($pink-950);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    @include body-text-24($pink-950);
+    max-width: 450px;
+    text-align: center;
+  }
+}
+
+.promo {
+  background-image: url("@/assets/img/home/promo_bg.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: left;
+}
+
+.promo-card {
+  display: flex;
+  justify-content: flex-end;
+  padding: 170px 0;
+  align-items: center;
+
+  &__info {
+    max-width: 660px;
+    padding-left: 142px;
+    margin-right: 80px;
+  }
+
+  &__title {
+    @include nav-item($pink-600);
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    @include header-4($pink-950);
+    border-bottom: 4px dashed $pink-900;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include body-text-24($pink-950);
+    max-width: 410px;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &_text {
+      @include body-text-24($pink-950);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $pink-600;
+      }
+    }
+    &:hover #arrow {
+      fill: $pink-600;
+    }
+  }
+}
+
+.feedback {
+
+  &__up {
+    position: relative;
+    margin: 0 15px;
+  }
+
+  &__text {
+    @include header-4($pink-950);
+    padding: 230px 0 100px;
+    max-width: 1260px;
+  }
+
+  &__quote {
+    position: absolute;
+    top: 270px;
+    right: 250px;
+    z-index: -1;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 15px 200px;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+
+    &_name {
+      @include nav-subitem($pink-950);
+    }
+
+    &_about {
+      @include body-text-18($pink-950);
+    }
+  }
+
+  &__photo {
+    margin-right: 30px;
+  }
+
+  &__btn {
+    border: 2px solid $pink-200;
+    border-radius: 10px;
+    padding: 20px 46px;
+    background-color: transparent;
+    @include header-4($pink-400);
+    font-size: 32px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $pink-50;
+      border-color: $pink-500;
+      color: $pink-500;
+    }
+  }
+}
+
+
+// Desktop view - middle point
+@media (max-width: 1644px) {
+  .top-info {
+    background-position: top;
+
+    &__content {
+      gap: 80px;
+      padding-top: 80px;
+    }
+
+    &__title {
+      font-size: 64px;
+    }
+  }
+
+  .menu {
+    &__content {
+      padding-top: 480px;
+      margin-bottom: 300px;
+
+      &_left {
+        padding-left: 30px;
+      }
+
+      &_right {
+        margin-left: 60px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__text {
+      margin-right: 15px;
+      max-width: 400px;
+    }
+
+    &__list {
+      font-size: 26px;
+    }
+
+    &__btn {
+      @include header-5($pink-950);
+      padding: 14px 24px;
+    }
+  }
+
+  .cafe {
+
+    &__content {
+
+      &_right {
+        max-width: 600px;
+        margin-right: 15px;
+      }
+
+      &_title {
+        @include header-4($pink-950);
+        padding-top: 50px;
+      }
+
+      &_text {
+        @include body-text-24($pink-950);
+        line-height: 180%;
+        max-width: 600px;
+      }
+
+      &_address {
+        @include header-5($pink-950);
+        max-width: 400px;
+      }
+    }
+  }
+
+  .feature-card {
+
+    &__title {
+      max-width: 350px;
+    }
+  }
+
+  .promo {
+    background-size: cover;
+  }
+
+  .promo-card {
+    padding: 250px 0;
+
+    &__info {
+      padding-left: 162px;
+      margin: 0 80px 0 40px;
+    }
+
+    &__heading {
+      @include header-5($pink-950);
+      max-width: 490px;
+    }
+  }
+
+  .feedback {
+    &__text {
+      padding-left: 40px;
+    }
+
+    &__photo {
+      padding-left: 40px;
+    }
+  }
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+  .top {
+    margin-bottom: 60px;
+  }
+
+  .top-info {
+
+    &__content {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      max-width: 700px;
+      margin: auto;
+      gap: 60px;
+      padding-top: 0;
+      padding-bottom: 100px;
+    }
+
+    &__title {
+      max-width: 600px;
+      @include header-4(white);
+    }
+
+    &__text1 {
+      max-width: 600px;
+      @include body-text-18(white);
+    }
+
+    &__text2 {
+      max-width: 300px;
+      margin: 0 0 0 40px;
+      padding: 0;
+    }
+  }
+
+  .top-info1 {
+    text-align: end;
+  }
+
+  .top-info2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .menu {
+    &__content {
+      padding-top: 200px;
+      flex-direction: column;
+      align-items: center;
+
+      &_left {
+        padding-left: 15px;
+        width: 70%;
+      }
+
+      &_right {
+        padding-top: 100px;
+      }
+    }
+
+    &__title {
+      @include header-2($pink-950);
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      margin-right: 0;
+      max-width: 680px;
+    }
+
+    &__list {
+      font-size: 24px;
+    }
+
+    &__btn {
+      padding: 20px 30px;
+    }
+  }
+
+  .cafe {
+    padding-bottom: 50px;
+
+    &__video {
+      padding: 30px;
+      border-radius: 80px;
+      max-width: 450px;
+    }
+
+    &__text {
+      display: block;
+      @include body-text-24($pink-950);
+      max-width: 675px;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+
+    &__content {
+      padding-bottom: 30px;
+      justify-content: flex-start;
+      gap: 60px;
+
+
+      &_left {
+        margin-top: -220px;
+        margin-left: 80px;
+      }
+
+      &_right {
+        max-width: 600px;
+        margin-right: 15px;
+      }
+
+      &_title {
+        @include header-4($pink-950);
+        padding-top: 50px;
+      }
+
+      &_text {
+        display: none;
+      }
+
+      &_address {
+        @include body-cap($pink-950);
+        font-size: 24px;
+        max-width: 240px;
+      }
+    }
+  }
+
+  .features {
+    justify-content: center;
+  }
+
+  .feature-card {
+
+    &__img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      @include header-6($pink-950);
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include body-text-18($pink-950);
+      max-width: 270px;
+    }
+  }
+
+  .promo-card {
+    flex-direction: column-reverse;
+    padding: 200px 0 250px 0;
+
+    &__img {
+      padding-left: 240px;
+    }
+
+    &__info {
+      padding-left: 240px;
+    }
+  }
+
+  .feedback {
+    &__text {
+      @include header-5($pink-950);
+      padding: 120px 0 70px 40px;
+      max-width: 910px;
+    }
+
+    &__quote {
+      top: 150px;
+      right: 120px;
+    }
+  }
+}
+
+// Mobile view
+@media (max-width: 960px) {
+  .menu {
+    &__content {
+      margin-bottom: 250px;
+    }
+  }
+
+  .cafe {
+
+    &__video {
+      max-width: 550px;
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+
+      &_left {
+        margin: -150px auto 0;
+      }
+
+      &_right {
+        max-width: 600px;
+        margin-right: 0;
+      }
+
+      &_title {
+        padding-top: 0;
+      }
+
+      &_address {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .feature-card {
+    padding: 20px 0;
+
+    &__img {
+      max-width: 260px;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      @include header-4($pink-950);
+      max-width: 550px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include body-text-24($pink-950);
+      max-width: 628px;
+    }
+  }
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+  .top {
+    margin-bottom: 40px;
+  }
+
+  .top-info {
+
+    &__content {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      max-width: 700px;
+      margin: auto;
+      gap: 60px;
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+
+    &__title {
+      max-width: 330px;
+      @include header-6(white);
+      font-size: 28px;
+      line-height: 125%;
+      margin-bottom: 30px;
+    }
+
+    &__text1 {
+      max-width: 300px;
+      @include body-text-18(white);
+      font-size: 16px;
+    }
+
+    &__text2 {
+      max-width: 300px;
+      font-size: 16px;
+      margin: auto;
+      padding: 20px 0 0 0;
+    }
+
+    &__img1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .top-info1 {
+    text-align: start;
+    margin: auto;
+  }
+
+  .top-info2 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+    padding-top: 40px;
+    align-items: center;
+  }
+
+  .menu {
+    &__content {
+      padding-top: 120px;
+      margin-bottom: 50px;
+
+      &_left {
+        padding-left: 0;
+        width: 88%;
+      }
+
+      &_right {
+        padding-top: 40px;
+        margin-left: 0;
+      }
+    }
+
+    &__title {
+      @include header-4($pink-950);
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include body-text-18(black);
+      max-width: 330px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    &__price {
+      @include header-6($pink-950);
+      text-align: right;
+      padding-top: 10px;
+      border-top: 2px dashed $pink-950;
+    }
+
+    &__list {
+      @include body-text-18($pink-950);
+      text-transform: lowercase;
+      margin-bottom: 30px;
+      line-height: 125%;
+    }
+
+    &__btn {
+      @include header-6($pink-950);
+      padding: 10px 30px;
+      width: 280px;
+      line-height: 100%;
+      margin: auto;
+    }
+  }
+
+  .cafe {
+
+    &__video {
+      max-width: 375px;
+    }
+
+    &__content {
+
+      &_left {
+        margin: auto;
+      }
+
+      &_right {
+        max-width: 340px;
+        margin-right: 0;
+      }
+
+      &_title {
+        @include header-5($pink-950);
+        padding-top: 0;
+      }
+
+      &_address {
+        @include body-cap($pink-950);
+        font-family: Jost, 'sans-serif';
+        font-size: 16px;
+        max-width: 400px;
+      }
+    }
+
+    &__text {
+      margin: 0 20px;
+      @include body-text-18($pink-950);
+      font-size: 16px;
+    }
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 10px;
+  }
+
+  .feature-card {
+    padding: 20px 0;
+
+    &__img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      @include header-6($pink-950);
+      max-width: 330px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include body-text-18($pink-950);
+      font-size: 14px;
+      max-width: 285px;
+    }
+  }
+
+  .promo {
+    background-image: url("@/assets/img/home/promo_bg_small.png");
+    background-size: cover;
+  }
+
+  .promo-card {
+    padding: 80px 0 150px;
+
+    &__img {
+      padding-left: 40px;
+    }
+
+    &__info {
+      padding-left: 50px;
+    }
+
+    &__title {
+      @include nav-item-t($pink-600);
+    }
+
+    &__heading {
+      max-width: 230px;
+      @include body-text-18($pink-950);
+    }
+
+    &__text {
+      @include body-text-18($pink-950);
+      max-width: 220px;
+    }
+
+    &__btn {
+      padding-left: 20px;
+
+      &_text {
+        @include body-text-18($pink-950);
+      }
+    }
+  }
+
+  .feedback {
+    &__text {
+      @include header-6($pink-950);
+      line-height: 120%;
+      padding: 120px 0 70px 15px;
+      max-width: 330px;
+    }
+
+    &__quote {
+      width: 100px;
+      top: 250px;
+      right: 30px;
+    }
+
+    &__down {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 15px 80px;
+    }
+
+    &__author {
+      margin-bottom: 40px;
+    }
+
+    &__photo {
+      padding: 0;
+      width: 80px;
+      margin-right: 30px;
+    }
+
+    &__btn {
+      padding: 8px 26px;
+      @include header-6($pink-400);
+    }
+  }
+}

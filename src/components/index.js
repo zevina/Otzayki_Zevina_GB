@@ -9,7 +9,6 @@ import SubmitButton from "@/components/UI/buttons/SubmitButton.vue";
 import MyInput from "@/components/UI/MyInput.vue";
 import QuantityCounter from "@/components/UI/QuantityCounter.vue";
 import Cart from "@/components/Cart.vue";
-import FeatureItem from "@/components/FeatureItem.vue";
 import MenuItem from "@/components/MenuItem.vue";
 import MenuList from "@/components/MenuList.vue";
 import PromoItem from "@/components/PromoItem.vue";
@@ -27,7 +26,6 @@ export default [
     MyInput,
     QuantityCounter,
     Cart,
-    FeatureItem,
     MenuItem,
     MenuList,
     PromoItem
