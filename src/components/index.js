@@ -11,7 +11,6 @@ import QuantityCounter from "@/components/UI/QuantityCounter.vue";
 import Cart from "@/components/Cart.vue";
 import MenuItem from "@/components/MenuItem.vue";
 import MenuList from "@/components/MenuList.vue";
-import PromoItem from "@/components/PromoItem.vue";
 
 
 export default [
@@ -28,5 +27,4 @@ export default [
     Cart,
     MenuItem,
     MenuList,
-    PromoItem
 ]

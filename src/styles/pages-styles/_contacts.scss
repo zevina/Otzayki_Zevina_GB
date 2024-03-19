@@ -2,29 +2,247 @@
 @import "../fonts";
 @import "../mixins";
 
-.top {
-  &__bg {
-    width: 100%;
+.top__img {
+  background: url('@/assets/img/contacts/contacts_bg_big.png') no-repeat center;
+  background-size: cover;
+  background-position: left;
+  height: 872px;
+}
+
+.contacts-content {
+  background: url('@/assets/img/promo/promo_item_bg.svg') no-repeat center;
+  background-size: cover;
+  background-position: right;
+  margin-bottom: 300px;
+
+  position: relative;
+
+  &__decor1 {
+    position: absolute;
+    top: 720px;
+    left: 0;
   }
 }
 
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 90px;
+  padding-top: 140px;
+  padding-bottom: 160px;
+  margin: 0 15px;
+
+  &__right {
+    width: 700px;
+  }
+
+  &__cafe {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+
+    &_up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      border-bottom: 2px dashed $pink-950;
+    }
+
+    &_down {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_open {
+      @include header-4($pink-950);
+    }
+
+    &_daily {
+      @include nav-item($pink-950);
+    }
+
+    &_btn {
+      border: 2px solid $pink-900;
+      border-radius: 10px;
+      padding: 20px 46px;
+      @include nav-item-t($pink-950);
+    }
+
+    &_address {
+      @include body-text-24($pink-950);
+      text-align: right;
+      max-width: 365px;
+    }
+  }
+
+  &__all {
+    display: flex;
+    flex-direction: column;
+
+    &_up {
+      display: flex;
+      gap: 110px;
+      margin-bottom: 80px;
+    }
+
+    &__social_list {
+      list-style-type: none;
+      display: flex;
+      gap: 38px;
+    }
+
+    &_nickname {
+      @include header-5($pink-600);
+    }
+
+    &_phone {
+      @include header-5($pink-950);
+    }
+  }
+}
+
+.accent-text {
+  color: $pink-600;
+}
 
 // Desktop view - middle point
 @media (max-width: 1640px) {
+  .contacts-content {
+    &__decor1 {
+      display: none;
+    }
+  }
 
+  .contacts {
+    flex-direction: column-reverse;
+    gap: 60px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  
+    &__all {
+  
+      &_phone {
+        text-align: center;
+      }
+    }
+  }
 }
 
 // Tablet view
 @media (max-width: 1200px) {
+  .top__img {
+    background: url('@/assets/img/contacts/contacts_bg_middle.png') no-repeat center;
+    background-size: cover;
+    background-position: left;
+    height: 536px;
+    }
 
+  .contacts {
+  
+    &__cafe {
+  
+      &_open {
+        @include header-5($pink-950);
+      }
+  
+      &_daily {
+        @include nav-item-t($pink-950);
+      }
+    }
+
+  }
 }
 
 // Mobile view
 @media (max-width: 960px) {
-
+  .top__img {
+    background: url('@/assets/img/contacts/contacts_bg_middle.png') no-repeat center;
+    background-size: cover;
+    background-position: left;
+    height: 430px;
+    }
 }
 
 // Mobile - middle point
 @media (max-width: 768px) {
+  .top__img {
+    background: url('@/assets/img/contacts/contacts_bg_small.png') no-repeat center;
+    background-size: cover;
+    background-position: left;
+    height: 220px;
+    }
 
+  .contacts {
+    padding-bottom: 20px;
+
+    &__left {
+      &__img {
+        display: none;
+      }
+    }
+
+    &__right {
+      width: 350px;
+      text-align: center;
+    }
+    
+
+    &__cafe {
+      max-width: 350px;
+
+      &_down {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      &_address {
+        margin-bottom: 40px;
+        text-align: center;
+        max-width: 300px;        
+        font-size: 18px;
+      }
+
+      &_btn {
+        width: 230px;
+        align-self: center;
+      }
+    }
+
+    &__all {
+      max-width: 350px;
+      align-items: center;
+
+      &_up {
+        flex-direction: column-reverse;
+      }
+
+      &_nickname {
+        @include header-6($pink-600);
+        text-align: left;
+      }
+  
+      &_phone {
+        @include header-6($pink-950);
+        width: 320px;
+      }
+    }
+
+  .contacts-content {
+    margin-bottom: 60px;
+
+    &__decor1, &__decor2 {
+      display: none;
+    }
+
+    &__decor3 {
+      display: block;
+      position: absolute;
+      top: 400px;
+      right: 0;
+    }
+  }
+}
 }
