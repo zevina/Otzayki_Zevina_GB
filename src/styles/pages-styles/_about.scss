@@ -2,29 +2,339 @@
 @import "../fonts";
 @import "../mixins";
 
-.top {
-  &__bg {
-    width: 100%;
+
+.top__img {
+background: url('@/assets/img/about/about_bg_big.png') no-repeat center;
+background-size: cover;
+height: 872px;
+margin-bottom: 100px;
+}
+
+.about-content {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.marina {
+  max-width: 1300px;
+  display: flex;
+  gap: 74px;
+  margin-bottom: 60px;
+
+  &__left {
+    text-align: center;
+
+    &_photo {
+      position: relative;
+    }
+
+    &__decor {
+      position: absolute;
+      z-index: -1;
+      top: 670px;
+      right: -140px;
+    }
+
+    &_title {
+      @include header-3($pink-950);
+      font-size: 64px;
+      margin-bottom: 24px;
+    }
+
+    &_name {
+      @include nav-item($pink-950);
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__right {
+    @include body-text-24($pink-950);
+    max-width: 38%;
+    padding-top: 160px;
+  }
+}
+
+.olga {
+  max-width: 1300px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 160px;
+
+  &__left {
+    max-width: 51%;
+    padding-top: 150px;
+
+    &_text {
+      @include body-text-24($pink-950);
+      text-align: end;
+      margin-bottom: 20px;
+    }
+
+    &_phone {
+      @include body-semibold($pink-950);
+      text-align: end;
+    }
+  }
+
+  &__right {
+
+    &_title {
+      @include header-3($pink-950);
+      font-size: 64px;
+      margin-bottom: 24px;
+    }
+
+    &_name {
+      @include nav-item($pink-950);
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 }
 
 
+
 // Desktop view - middle point
 @media (max-width: 1640px) {
-
+  .olga {
+    padding-top: 40px;
+  }
 }
 
 // Tablet view
 @media (max-width: 1200px) {
+  .top__img {
+    background: url('@/assets/img/about/about_bg_middle.png') no-repeat center;
+    background-size: cover;
+    height: 536px;
+    }
 
+  .marina {
+    max-width: 800px;
+    display: flex;
+    margin-bottom: 60px;
+  
+    &__left {
+          
+      &__decor {
+        width: 200px;
+        top: 290px;
+        right: -50px;
+      }
+  
+      &_title {
+        @include header-4($pink-950);
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+  
+      &_name {
+        @include nav-item-t($pink-950);
+        margin-bottom: 14px;
+      }
+    }
+  
+    &__right {
+      @include body-text-18($pink-950);
+      max-width: 45%;
+      padding-top: 110px;
+    }
+  }
+
+  .olga {
+    max-width: 800px;
+    gap: 120px;
+  
+    &__left {
+      padding-top: 100px;
+  
+      &_text {
+        @include body-text-18($pink-950);
+        margin-bottom: 20px;
+      }
+  
+      &_phone {
+        @include nav-item-t($pink-950);
+      }
+    }
+
+    &__right {
+  
+      &_title {
+        @include header-4($pink-950);
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+  
+      &_name {
+        @include nav-item-t($pink-950);
+        margin-bottom: 14px;
+      }
+    }
+  }
 }
 
 // Mobile view
 @media (max-width: 960px) {
+  .top__img {
+    background: url('@/assets/img/about/about_bg_small.png') no-repeat center;
+    background-size: cover;
+    height: 320px;
+    }
 
+    .marina {
+      max-width: 650px;
+      gap: 40px;
+    
+      &__left {
+
+        &__img {
+          width: 320px;
+        }
+
+        &__decor {
+          width: 180px;
+          top: 220px;
+          right: -65px;
+        }
+    
+        &_title {
+          @include header-4($pink-950);
+          font-size: 36px;
+          margin-bottom: 14px;
+        }
+    
+        &_name {
+          @include nav-item-t($pink-950);
+          margin-bottom: 14px;
+        }
+      }
+    
+      &__right {
+        @include body-text-18($pink-950);
+        max-width: 50%;
+        padding-top: 10px;
+      }
+    }
+      
+  
+    .olga {
+      max-width: 650px;
+      gap: 60px;
+    
+      &__left {
+        padding-top: 100px;
+        max-width: 440px;
+    
+        &_text {
+          @include body-text-18($pink-950);
+          margin-bottom: 20px;
+        }
+    
+        &_phone {
+          @include nav-item-t($pink-950);
+        }
+      }
+  
+      &__right {
+    
+        &_title {
+          @include header-4($pink-950);
+          font-size: 36px;
+          margin-bottom: 14px;
+        }
+    
+        &_name {
+          @include nav-item-t($pink-950);
+          margin-bottom: 60px;
+        }
+      }
+    }
 }
 
 // Mobile - middle point
 @media (max-width: 768px) {
+  .top__img {
+    background: url('@/assets/img/about/about_bg_small.png') no-repeat center;
+    background-size: cover;
+    height: 170px;
+    margin-bottom: 20px;
+  }
 
+  .about-content {
+    margin-bottom: 40px;
+  }
+
+  .marina {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    &__left {
+
+      &__img {
+        width: 100%;
+      }
+
+      &__decor {
+        display: none;
+      }
+  
+      &_title {
+        @include header-5($pink-950);
+        margin-bottom: 14px;
+      }
+  
+    }
+  
+    &__right {
+      @include body-text-18($pink-950);
+      max-width: 300px;
+      font-size: 16px;
+      padding-top: 10px;
+    }
+  }
+  
+  .olga {
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 300px;
+    gap: 20px;
+    padding-top: 20px;
+  
+    &__left {
+      padding-top: 0;
+      width: 100%;
+  
+      &_text {
+        @include body-text-18($pink-950);
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  
+      &_phone {
+        text-align: center;
+      }
+    }
+
+    &__right {
+  
+      &_title {
+        @include header-4($pink-950);
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+  
+      &_name {
+        @include nav-item-t($pink-950);
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
