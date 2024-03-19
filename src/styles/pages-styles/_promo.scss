@@ -2,10 +2,57 @@
 @import "../fonts";
 @import "../mixins";
 
-.top {
-  &__bg {
-    width: 100%;
+.top__img {
+  background: url('@/assets/img/promo/promo_bg_big.png') no-repeat center;
+  background-size: cover;
+  background-position: left;
+  height: 872px;
+}
+
+.promo-content {
+  background: url('@/assets/img/promo/promo_item_bg.svg') no-repeat center;
+  background-size: cover;
+  background-position: right;
+  margin-bottom: 300px;
+
+  position: relative;
+
+  &__decor {
+    position: absolute;
+    bottom: -230px;
   }
+}
+
+.promo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 100px;
+  padding-top: 140px;
+  padding-bottom: 160px;
+  margin: 0 15px;
+
+  &__left {
+    max-width: 700px;
+  }
+
+  &__title {
+    @include nav-item($pink-600);
+    margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    @include header-4($pink-950);
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    border-bottom: 4px dashed $pink-950;
+  }
+
+  &__text {
+    @include body-text-24($pink-950);
+    padding-left: 30px;
+  }
+
 }
 
 
@@ -16,15 +63,87 @@
 
 // Tablet view
 @media (max-width: 1200px) {
+  .top__img {
+    background: url('@/assets/img/promo/promo_bg_middle.png') no-repeat center;
+    background-size: cover;
+    height: 536px;
+  }
 
+  .promo-content {
+    margin-bottom: 80px;
+
+    &__decor {
+      bottom: 150px;
+    }
+  }
+
+  .promo {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    flex-direction: column;
+
+    &__right {
+    padding-left: 250px;
+    }
+  }
 }
 
 // Mobile view
 @media (max-width: 960px) {
-
+  .top__img {
+    background: url('@/assets/img/promo/promo_bg_middle.png') no-repeat center;
+    background-size: cover;
+    height: 320px;
+    }
 }
 
 // Mobile - middle point
 @media (max-width: 768px) {
+  .top__img {
+    background: url('@/assets/img/promo/promo_bg_small.png') no-repeat center;
+    background-size: cover;
+    height: 170px;
+    }
 
+  .promo-content {
+    margin-bottom: 120px;
+
+    &__decor {
+      transform: scale(0.4);
+      left: -75px;
+      bottom: -170px;
+    }
+  }
+
+  .promo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 100px;
+
+    &__left {
+      max-width: 300px;
+    }
+
+    &__title {
+      @include nav-item-t($pink-600);
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      @include header-5($pink-950);
+      line-height: 120%;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 3px dashed $pink-950;
+    }
+
+    &__text {
+      @include body-text-18($pink-950);
+      padding-left: 30px;
+    }
+
+    &__right {
+      padding-left: 0;
+    }
+  }
 }
