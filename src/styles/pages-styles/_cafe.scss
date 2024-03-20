@@ -2,29 +2,396 @@
 @import "../fonts";
 @import "../mixins";
 
-.top {
-  &__bg {
-    width: 100%;
+.top__img {
+  background: url('@/assets/img/cafe/cafe_bg_big.png') no-repeat center;
+  background-size: cover;
+  background-position: right;
+  height: 872px;
+}
+
+.wrapper-drinks {
+  position: relative;
+}
+
+.wrapper-desserts {
+  background-color: $pink-100;
+  border-radius: 400px 0 0 0;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.drinks {
+  margin: 0 15px;
+
+  &__title {
+    @include header-1($pink-950);
+    text-align: center;
+    margin: 100px 0 30px;
+  }
+
+  &__subtitle {
+    @include body-text-24($pink-950);
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    &_right {
+      max-width: 710px;
+      width: 100%;
+      margin: 0 20px;
+    }
+
+    &_section {
+      margin-bottom: 55px;
+    }
+
+    &_item {
+      @include header-5($pink-950);
+      background: inherit;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 12px;
+      
+      span {
+        position: relative;
+      }
+    
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 2px dashed $pink-950;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.desserts {
+  margin: 0 15px;
+
+  &__title {
+    @include header-1($pink-950);
+    text-align: center;
+    margin: 100px 0 30px;
+  }
+
+  &__subtitle {
+    @include body-text-24($pink-950);
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    &_left {
+      max-width: 710px;
+      width: 100%;
+      margin: 0 20px;
+    }
+
+    &_item {
+      @include header-5($pink-950);
+      background: inherit;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 48px;
+      
+      span {
+        position: relative;
+      }
+    
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 2px dashed $pink-950;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
   }
 }
 
 
+
+
 // Desktop view - middle point
 @media (max-width: 1640px) {
+  .drinks {
 
+    &__content__img {
+      width: 700px;
+    }
+
+    &__decor__img {
+      width: 350px;
+    }
+  }
+  
+  .desserts {
+
+    &__content__img {
+      width: 700px;
+    }
+
+    &__decor__img {
+      width: 330px;
+    }
+  }
 }
 
 // Tablet view
 @media (max-width: 1200px) {
+  .top__img {
+    background: url('@/assets/img/cafe/cafe_bg_middle.png') no-repeat center;
+    background-size: cover;
+    height: 480px;
+    }
 
+  .drinks {
+    
+    &__title {
+      @include header-3($pink-950);
+      margin: 100px 0 20px;
+    }
+  
+    &__subtitle {
+      @include body-text-18($pink-950);
+      margin-bottom: 40px;
+    }
+  
+    &__content {
+      flex-direction: column;
+      max-width: 700px;
+      margin: auto;
+  
+      &_right {
+        width: 100%;
+        margin: 60px 0;
+      }
+    }
+
+    &__decor__img {
+      width: 100%;
+    }
+  }
+  
+  .desserts {
+  
+    &__title {
+      @include header-3($pink-950);
+      margin: 100px 0 20px;
+    }
+  
+    &__subtitle {
+      @include body-text-18($pink-950);
+      margin-bottom: 60px;
+    }
+  
+    &__content {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-bottom: 150px;
+  
+      &_left {
+        max-width: 700px;
+        width: 100%;
+        margin: 60px auto;
+      }
+    }
+  
+    &__decor {
+      bottom: 80px;
+      left: 330px;
+    }
+
+    &__decor__img {
+      width: 100%;
+    }
+  }
 }
 
 // Mobile view
 @media (max-width: 960px) {
+  .top__img {
+    background: url('@/assets/img/cafe/cafe_bg_small.png') no-repeat center;
+    background-size: cover;
+    background-position: right;
+    height: 1000px;
+    }
 
+  .wrapper-desserts {
+    border-radius: 300px 0 0 0;
+  }
+
+  .drinks {
+  
+    &__content {
+      max-width: 650px;
+      margin: auto;
+  
+      &_right {
+        width: 100%;
+        margin: 60px 0;
+      }
+
+      &__img {
+        width: 650px;
+      }
+    }
+
+    &__decor__img {
+      width: 200px;
+    }
+  }
+  
+  .desserts {
+  
+    &__content {
+      margin-bottom: 70px;
+  
+      &_left {
+        max-width: 650px;
+        width: 100%;
+        margin: 60px auto;
+      }
+
+      &__img {
+        width: 650px;
+      }
+    }
+  
+    &__decor {
+      bottom: 60px;
+      left: 250px;
+    }
+
+    &__decor__img {
+      width: 250px;
+    }
+  }
 }
 
 // Mobile - middle point
 @media (max-width: 768px) {
+  .top__img {
+    background: url('@/assets/img/cafe/cafe_bg_small.png') no-repeat center;
+    background-size: cover;
+    height: 420px;
+    }
 
+  .wrapper-desserts {
+    border-radius: 100px 0 0 0;
+    padding-bottom: 60px;
+  }
+
+  .drinks {
+    margin: 0;
+  
+    &__title {
+      @include header-4($pink-950);
+      margin: 40px 0 10px;
+    }
+  
+    &__subtitle {
+      @include body-text-18($pink-950);
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  
+    &__content {
+      align-items: center;
+      margin-bottom: 20px;
+
+      &__img {
+        width: 375px;
+      }
+  
+      &_right {
+        max-width: 300px;
+        width: 100%;
+        margin: 20px;
+      }
+  
+      &_section {
+        margin-bottom: 40px;
+      }
+  
+      &_item {
+        @include header-6($pink-950);
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__decor__img {
+      width: 100%;
+    }
+  }
+  
+  .desserts {
+    margin: 0;
+  
+    &__title {
+      @include header-4($pink-950);
+      margin: 40px 0 10px;
+    }
+  
+    &__subtitle {
+      @include body-text-18($pink-950);
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  
+    &__content {
+      margin-bottom: 60px;
+
+      &__img {
+        width: 375px;
+      }
+  
+      &_left {
+        max-width: 300px;
+        width: 100%;
+        margin: 20px;
+      }
+  
+      &_item {
+        @include header-6($pink-950);
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+  
+    &__decor {
+      bottom: 30px;
+      left: 140px;
+    }
+
+    &__decor__img {
+      width: 100%;
+    }
+  }
 }
