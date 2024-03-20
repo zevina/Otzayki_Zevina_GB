@@ -100,14 +100,14 @@
     <div class="contacts-content__decor contacts-content__decor1">
       <img class="contacts-content__decor__img" alt="mint" src='@/assets/img/contacts/contacts_mint.svg'>
     </div>
-    <!-- <div class="contacts-content__decor contacts-content__decor2">
+    <div class="contacts-content__decor contacts-content__decor2">
       <img class="contacts-content__decor__img" alt="rosemary" src='@/assets/img/contacts/contacts_rosemary.svg'>
-    </div> -->
+    </div>
     <div class="contacts-content__decor contacts-content__decor3 hidden">
       <img class="contacts-content__decor__img" alt="rosemary" src='@/assets/img/contacts/contacts_rosemary_2.svg'>
     </div>
   </div>
-  <!-- <feedback-form></feedback-form> -->
+  <feedback-form class="feedback-form"></feedback-form>
 </template>
 
 <script>

@@ -13,7 +13,7 @@
   background: url('@/assets/img/promo/promo_item_bg.svg') no-repeat center;
   background-size: cover;
   background-position: right;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 
   position: relative;
 
@@ -21,6 +21,12 @@
     position: absolute;
     top: 720px;
     left: 0;
+  }
+
+  &__decor2 {
+    position: absolute;
+    bottom: -1500px;    
+    right: 0;
   }
 }
 
@@ -111,7 +117,7 @@
 // Desktop view - middle point
 @media (max-width: 1640px) {
   .contacts-content {
-    &__decor1 {
+    &__decor1, &__decor2{
       display: none;
     }
   }
@@ -229,13 +235,10 @@
         width: 320px;
       }
     }
+  }
 
   .contacts-content {
     margin-bottom: 60px;
-
-    &__decor1, &__decor2 {
-      display: none;
-    }
 
     &__decor3 {
       display: block;
@@ -244,5 +247,4 @@
       right: 0;
     }
   }
-}
 }

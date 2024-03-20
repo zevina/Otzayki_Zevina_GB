@@ -3,17 +3,10 @@
         <p class="subscribe-form__title">Не пропускайте важное!</p>
         <div>
             <div class="subscribe-form__form">
-                <my-input
-                  v-model="subscription.email"
-                  type="email"
-                  placeholder="E-mail адрес"
-                  class="subscribe-form__input"
-                />
-                <submit-button
-                  :disabled="!isDisable"
-                  @click="sendEmail"
-                  class="subscribe-form__btn"
-                >
+                <my-input v-model="subscription.email" type="email" placeholder="E-mail адрес"
+                    class="subscribe-form__input" />
+
+                <submit-button :disabled="!isDisable" @click="sendEmail" class="subscribe-form__btn">
                     Отправить
                 </submit-button>
             </div>
@@ -28,7 +21,7 @@ import SubmitButton from "@/components/UI/buttons/SubmitButton.vue";
 
 export default {
     name: 'subscribe-form',
-    components: {SubmitButton, MyInput},
+    components: { SubmitButton, MyInput },
     data() {
         return {
             subscription: {
