@@ -1,193 +1,172 @@
 @import "vars";
 @import "fonts";
 @import "mixins";
+@import "submit";
 
 .feedback-form {
- 
- background-color: $pink-100;
- border-radius: 400px 0 0 0;
- padding: 120px 0;
+  
+  background-color: $pink-100;
+  border-radius: 400px 0 0 0;
+  padding: 120px 0;
 
- &_wrapper {
-  margin: 0 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center
- }
-
- &__title {
-  @include header-1($pink-950);
-  margin: 0 0 30px 350px;
-  align-self: flex-start;
-}
-
- &__desc {
-  @include body-text-24($pink-900);
-  margin: 0 40px 70px 350px;
-}
-
- &__form {
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   gap: 46px;
-   margin-bottom: 60px;
- }
-
- &__name {
-  display: flex;
-  justify-content: space-between;
-  gap: 46px;
-  width: 100%;
- }
-
- &__input {
-  width: 100%;
-   background-color: transparent;
-   border: 2px solid $pink-900;
-   padding: 30px 40px;
-   @include body-text-24($pink-950);
-   
-   &::placeholder {
-    color: $pink-900;
-   }
-
-   &_left {
-    border-radius: 40px 0 0 0;
-   }
- 
-   &_right {
-    border-radius: 0 40px 0 0;
-   }
- 
-   &_down {
-    border-radius: 0 0 40px 40px;
-   }
+  &_wrapper {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
   }
 
- &__btn {
-  width: 500px;
-  align-self: center;
-  border: none;
-  border-radius: 40px 0 40px 0;
-  padding: 20px 46px;
-  margin-bottom: 200px;
-  background: $pink-300;
-  @include header-5($pink-900);
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: $pink-400;
+  &__title {
+    @include header-1($pink-950);
+    margin: 0 0 30px 350px;
+    align-self: flex-start;
   }
 
-  &:disabled {
-    background: $pink-200;
+  &__desc {
+    @include body-text-24($pink-900);
+    margin: 0 40px 70px 350px;
   }
- }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 46px;
+    margin-bottom: 60px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    gap: 46px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid $pink-900;
+    padding: 30px 40px;
+    @include body-text-24($pink-950);
+    
+    &::placeholder {
+      color: $pink-900;
+    }
+
+    &_left {
+      border-radius: 40px 0 0 0;
+    }
+  
+    &_right {
+      border-radius: 0 40px 0 0;
+    }
+  
+    &_down {
+      border-radius: 0 0 40px 40px;
+    }
+  }
 }
 
 
 // Desktop view - middle point
 @media (max-width: 1644px) {
- .feedback-form {
+  .feedback-form {
 
-  &__btn {
-   margin-bottom: 40px;
+    &__btn {
+    margin-bottom: 40px;
+    }
   }
- }
 }
 
 // Tablet view
 @media (max-width: 1200px) {
 
- .feedback-form {
+  .feedback-form {
 
-  &_wrapper {
-   margin: 0 55px;
+    &_wrapper {
+    margin: 0 55px;
+    }
+
+    &__title {
+      @include header-2($pink-950);
+      margin: 0 auto 30px;
+    }
+    
+    &__desc {
+      @include body-text-24($pink-900);
+      max-width: 650px;
+      text-align: center;
+      margin: 0 auto 80px;
+    }
+  }
   }
 
-   &__title {
-    @include header-2($pink-950);
-    margin: 0 auto 30px;
-  }
-  
-   &__desc {
-    @include body-text-24($pink-900);
-    max-width: 650px;
-    text-align: center;
-    margin: 0 auto 80px;
-  }
- }
-}
+  // Mobile view
+  @media (max-width: 960px) {
 
-// Mobile view
-@media (max-width: 960px) {
-
-}
-
-// Mobile - middle point
-@media (max-width: 768px) {
- .feedback-form {
-  padding: 60px 0;
-  border-radius: 120px 0 0 0;
-  // background-position: left;
-
-  &_wrapper {
-   max-width: 350px;
-   margin: auto;
   }
 
-   &__title {
-    @include header-4($pink-950);
-  }
-  
-   &__desc {
-    @include body-text-18($pink-900);
-    max-width: 330px;
-    margin: 0 auto 40px;
-  }
+  // Mobile - middle point
+  @media (max-width: 768px) {
+  .feedback-form {
+    padding: 60px 0;
+    border-radius: 120px 0 0 0;
+    // background-position: left;
 
-  &__form {
-   gap: 20px;
-   margin-bottom: 40px;
-   align-items: center;
-  }
+    &_wrapper {
+    max-width: 350px;
+    margin: auto;
+    }
 
-  &__name {
-   flex-direction: column;
-   align-items: center;
-   gap: 20px;
+    &__title {
+      @include header-4($pink-950);
+    }
+    
+    &__desc {
+      @include body-text-18($pink-900);
+      max-width: 330px;
+      margin: 0 auto 40px;
+    }
+
+    &__form {
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+    }
+
+    &__name {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   &__btn {
-   width: 300px;
-   margin-bottom: 40px;
-   padding: 12px 20px;
-   @include header-6($pink-900);
+    margin-bottom: 40px;
+    padding: 12px 20px;
   }
 
   &__input {
-   width: 330px;
-    border: 1px solid $pink-900;
-    padding: 30px 40px;
-    @include body-text-18($pink-950);
-    
-    &::placeholder {
-     text-align: center;
-     color: $pink-900;
-    }
- 
-    &_left {
-     border-radius: 40px 40px 0 0;
-    }
+    width: 330px;
+      border: 1px solid $pink-900;
+      padding: 30px 40px;
+      @include body-text-18($pink-950);
+      
+      &::placeholder {
+      text-align: center;
+      color: $pink-900;
+      }
   
-    &_right {
-     border-radius: 0 0 0 0;
-    }
+      &_left {
+      border-radius: 40px 40px 0 0;
+      }
+    
+      &_right {
+      border-radius: 0 0 0 0;
+      }
 
-    &_down {
-     padding: 30px 40px 120px;
+      &_down {
+      padding: 30px 40px 120px;
+      }
     }
-   }
- }
+  }
 }
