@@ -3,32 +3,18 @@
 @import "mixins";
 
 .submit-button {
- width: 500px;
- align-self: center;
- border: none;
- border-radius: 40px 0 40px 0;
- padding: 20px 46px;
- margin-bottom: 200px;
- background: $pink-300;
- @include header-5($pink-900);
- transition: all 0.3s ease;
-
- &:hover {
-  background: $pink-400;
- }
-
- &:disabled {
-  background: $pink-200;
- }
+  border: none;
+  border-radius: 40px 0 40px 0;
+  font-family: 'blackberry', serif;
+  font-size: 32px;
+  line-height: 150%;
 }
 
-// Mobile - middle point
-@media (max-width: 768px) {
-
- .submit-button {
-   width: 300px;
-   @include header-6($pink-900);
- }
+// Tablet view
+@media (max-width: 1200px) {
+  .submit-button {
+    font-family: 'blackberry', serif;
+    font-size: 26px;
+    line-height: 185%;
+  }
 }
-
-

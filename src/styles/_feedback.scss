@@ -65,6 +65,15 @@
       border-radius: 0 0 40px 40px;
     }
   }
+
+  &__btn {
+    background-color: $pink-300;
+    border-radius: 40px 0;
+    padding: 20px 46px;
+    width: 500px;
+    height: 88px;
+    margin-bottom: 100px;
+  }
 }
 
 
@@ -141,32 +150,34 @@
   }
 
   &__btn {
-    margin-bottom: 40px;
     padding: 12px 20px;
+    width: 300px;
+    height: 68px;
+    margin-bottom: 40px;
   }
 
   &__input {
     width: 330px;
-      border: 1px solid $pink-900;
-      padding: 30px 40px;
-      @include body-text-18($pink-950);
-      
-      &::placeholder {
-      text-align: center;
-      color: $pink-900;
-      }
-  
-      &_left {
-      border-radius: 40px 40px 0 0;
-      }
+    border: 1px solid $pink-900;
+    padding: 30px 40px;
+    @include body-text-18($pink-950);
     
-      &_right {
-      border-radius: 0 0 0 0;
-      }
+    &::placeholder {
+    text-align: center;
+    color: $pink-900;
+    }
 
-      &_down {
-      padding: 30px 40px 120px;
-      }
+    &_left {
+    border-radius: 40px 40px 0 0;
+    }
+  
+    &_right {
+    border-radius: 0 0 0 0;
+    }
+
+    &_down {
+    padding: 30px 40px 120px;
+    }
     }
   }
 }

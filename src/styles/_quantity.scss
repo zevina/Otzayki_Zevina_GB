@@ -1,0 +1,80 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+
+.quantity {
+
+  &__counter {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__input {
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid $pink-900;
+  border-radius: 10px;
+  @include header-6($pink-950);
+  text-align: center;
+  
+    &::placeholder {
+      color: $pink-800;
+    }
+  }
+
+  &__btn {
+    width: 80px;
+    height: 50px;
+    @include header-5($pink-600);
+  }
+}
+
+
+
+
+// Tablet view
+@media (max-width: 1200px) {
+  .quantity {
+
+    &__counter {
+      gap: 10px;
+    }
+
+    &__input {
+      width: 70px;
+      height: 30px;
+      border: 1px solid $pink-900;
+      @include header-6($pink-950);
+    }
+
+    &__btn {
+      width: 50px;
+      height: 30px;
+      @include header-6($pink-600);
+    }
+  }
+}
+
+
+// Mobile - middle point
+@media (max-width: 768px) {
+  .quantity {
+    &__counter {
+      gap: 4px;
+    }
+    
+    &__input {
+      width: 40px;
+      height: 20px;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    &__btn {
+      width: 25px;
+      height: 20px;
+      font-size: 16px;
+    }
+  }
+}

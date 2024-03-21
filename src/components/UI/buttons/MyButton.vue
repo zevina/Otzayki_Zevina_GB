@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="my-button">
+        <slot></slot>
     </div>
 </template>
 
@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import "@/styles/mybutton";
 </style>

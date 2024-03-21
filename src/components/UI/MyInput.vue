@@ -18,5 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
 </style>

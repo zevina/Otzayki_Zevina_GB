@@ -38,11 +38,32 @@ export default {
         sendEmail() {
             this.subscription.id = Date.now();
             this.$emit('send', this.subscription)
+
+            // Примерная логика отправки данных из формы подписки 
+            const url = 'https://example.com/feedback_endpoint';
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.subscription)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log("Данные из формы подписки успешно отправлены на сервер");
+                    } else {
+                        console.error("Произошла ошибка при отправке данных из формы подписки на сервер");
+                    }
+                })
+                .catch(error => {
+                    console.error("Ошибка при отправке данных из формы подписки на сервер:", error);
+                });
+
+            // очистка полей формы
             this.subscription = {
                 email: ''
             }
-            // имитация отправки данных:
-            console.log('Адрес добавлен в список рассылки новостей и сохранен в БД');
         },
     },
 }

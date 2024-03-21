@@ -1,0 +1,27 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+
+.my-button {
+ border: 2px solid $pink-900;
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+// Tablet view
+@media (max-width: 1200px) {
+ .my-button {
+  border: 1px solid $pink-900;
+ }
+}
+
+
+// Mobile - middle point
+@media (max-width: 768px) {
+ .my-button {
+  border-radius: 5px;
+ }
+}

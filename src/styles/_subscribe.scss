@@ -33,11 +33,10 @@
 
   &__btn {
     min-width: 200px;
-    border: none;
     border-radius: 0 0 40px 0;
     padding: 20px 46px;
     background: $pink-600;
-    @include header-5(white);
+    color: white;
     transition: all 0.3s ease;
 
     &:hover {
@@ -101,7 +100,6 @@
     &__btn {
       height: 60px;
       padding: 0;
-      @include header-6(white);
       transition: all 0.2s ease;
 
       &:active {
@@ -150,10 +148,6 @@
     &__input {
       min-width: 330px;
       margin-right: 0;
-    }
-
-    &__btn {
-      @include header-6(white);
     }
 
     &__text {
