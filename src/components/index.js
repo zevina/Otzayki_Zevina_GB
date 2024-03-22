@@ -9,8 +9,6 @@ import SubmitButton from "@/components/UI/buttons/SubmitButton.vue";
 import MyInput from "@/components/UI/MyInput.vue";
 import QuantityCounter from "@/components/UI/QuantityCounter.vue";
 import Cart from "@/components/Cart.vue";
-import MenuItem from "@/components/MenuItem.vue";
-import MenuList from "@/components/MenuList.vue";
 
 
 export default [
@@ -25,6 +23,4 @@ export default [
     MyInput,
     QuantityCounter,
     Cart,
-    MenuItem,
-    MenuList,
 ]

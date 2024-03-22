@@ -10,13 +10,13 @@
   }
 
   &__input {
-  width: 100px;
-  height: 50px;
-  background-color: transparent;
-  border: 2px solid $pink-900;
-  border-radius: 10px;
-  @include header-6($pink-950);
-  text-align: center;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid $pink-900;
+    border-radius: 10px;
+    @include header-6($pink-950);
+    text-align: center;
   
     &::placeholder {
       color: $pink-800;

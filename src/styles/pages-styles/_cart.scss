@@ -1,0 +1,166 @@
+@import "../vars";
+@import "../fonts";
+@import "../mixins";
+
+
+.delivery-content {
+ background-color: $pink-50;
+ border-radius: 0 0 0 400px;
+ padding: 120px 0;
+ margin-bottom: 160px;
+}
+
+.delivery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 15px;
+
+  &__right {
+   max-width: 792px;
+  }
+
+  &__title {
+   @include header-2($pink-950);
+   margin-bottom: 25px;
+  }
+
+  &__subtitle {
+   @include header-4($pink-950);
+  }
+
+  &__text {
+   @include body-text-24($pink-950);
+   margin-bottom: 20px;
+  }
+
+  &__text1 {
+   @include body-text-24($pink-950);
+   margin-bottom: 80px;
+  }
+
+  &__list {
+   @include body-text-24($pink-950);
+   margin-left: 10px;
+   list-style-position: inside;
+   list-style-type: disc;
+  }
+}
+
+
+// Desktop view - middle point
+@media (max-width: 1644px) {
+ .delivery-content {
+  padding: 100px 0;
+  margin-bottom: 100px;
+ }
+
+ .delivery {
+  justify-content: center;
+
+  &__right {
+    max-width: 480px;
+  }
+ }
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+ .delivery-content {
+  border-radius: 0 0 0 250px;
+  margin-bottom: 80px;
+ }
+
+ .delivery {
+  flex-direction: column;
+
+  &__right {
+    width: 800px;
+  }
+}
+}
+
+// Mobile view
+@media (max-width: 960px) {
+ .delivery-content {
+  border-radius: 0 0 0 150px;
+  padding: 60px 0;
+  margin-bottom: 60px;
+ }
+
+ .delivery {
+
+  &__right {
+   max-width: 500px;
+  }
+
+  &__title {
+   @include header-4($pink-950);
+   margin-bottom: 16px;
+  }
+
+  &__subtitle {
+   @include header-5($pink-950);
+  }
+
+  &__text {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-bottom: 10px;
+  }
+
+  &__text1 {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-bottom: 50px;
+  }
+
+  &__list {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-left: 8px;
+  }
+}
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+ .delivery-content {
+  border-radius: 0 0 0 80px;
+ }
+
+ .delivery {
+  margin: auto;
+
+  &__right {
+   max-width: 330px;
+  }
+
+  &__title {
+   @include header-4($pink-950);
+   margin-bottom: 12px;
+  }
+
+  &__subtitle {
+   @include header-5($pink-950);
+  }
+
+  &__text {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-bottom: 8px;
+  }
+
+  &__text1 {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-bottom: 30px;
+  }
+
+  &__list {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   margin-left: 8px;
+  }
+}
+}

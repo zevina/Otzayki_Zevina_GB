@@ -85,7 +85,7 @@
                     <video class="cafe__video" autoplay muted loop poster="@/assets/img/home/video_poster_big.png">
                         <source src="@/assets/img/home/video.mp4" type="video/mp4">
                         <source src="@/assets/img/home/video.webm" type="video/webm">
-                        <!--                <source src="@/assets/img/home/video.avi" type="video/avi">-->
+                        <!-- <source src="@/assets/img/home/video.avi" type="video/avi"> -->
                         Ваш браузер не поддерживает встроенные видео
                     </video>
                 </div>

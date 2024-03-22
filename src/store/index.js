@@ -1,4 +1,4 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
 
 export default createStore({
     state: () => ({
@@ -22,15 +22,15 @@ export default createStore({
     }),
     getters: {
         // topSection: state => state.topSection
-    //     cart: state => state.cart,
-    //     menuItems: state => state.menuItems,
-    //     total: state => {
-    //         let totalPrice = 0;
-    //         for (let i = 0; i < state.cart.length; i++) {
-    //             totalPrice += state.cart[i].price * state.cart[i].quantity;
-    //         }
-    //         return totalPrice;
-    //     }
+        //     cart: state => state.cart,
+        //     menuItems: state => state.menuItems,
+        //     total: state => {
+        //         let totalPrice = 0;
+        //         for (let i = 0; i < state.cart.length; i++) {
+        //             totalPrice += state.cart[i].price * state.cart[i].quantity;
+        //         }
+        //         return totalPrice;
+        //     }
     }
     // ,
     // mutations: {
@@ -46,4 +46,7 @@ export default createStore({
     //     }
     // }
 })
-;
+    ;
+
+
+

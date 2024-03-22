@@ -95,7 +95,6 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="contacts-content__decor contacts-content__decor1">
       <img class="contacts-content__decor__img" alt="mint" src='@/assets/img/contacts/contacts_mint.svg'>

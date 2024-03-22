@@ -28,13 +28,36 @@ export default {
     },
     methods: {
         submitForm() {
-            // Логика отправки формы заказа
-            console.log('Заказ оформлен');
+            // Примерная логика отправки данных из формы оформления заказа 
+            const url = 'https://example.com/feedback_endpoint';
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log("Данные из формы оформления заказа успешно отправлены на сервер");
+                    } else {
+                        console.error("Произошла ошибка при отправке данных из формы оформления заказа на сервер");
+                    }
+                })
+                .catch(error => {
+                    console.error("Ошибка при отправке данных из формы оформления заказа на сервер:", error);
+                });
+
+            // очистка полей формы
+            this.data = {
+                name: '',
+                email: '',
+                address: ''
+            }
         }
     }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
