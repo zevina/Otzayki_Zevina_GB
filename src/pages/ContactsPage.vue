@@ -110,6 +110,8 @@
 </template>
 
 <script>
+import FeedbackForm from '@/components/forms/FeedbackForm.vue';
+
 export default {
 
 }

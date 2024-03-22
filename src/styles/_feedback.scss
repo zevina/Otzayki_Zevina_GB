@@ -73,6 +73,10 @@
     width: 500px;
     height: 88px;
     margin-bottom: 100px;
+
+    &:hover {
+      background-color: $pink-400;
+    }
   }
 }
 

@@ -8,7 +8,9 @@ import MyButton from "@/components/UI/buttons/MyButton.vue";
 import SubmitButton from "@/components/UI/buttons/SubmitButton.vue";
 import MyInput from "@/components/UI/MyInput.vue";
 import QuantityCounter from "@/components/UI/QuantityCounter.vue";
-import Cart from "@/components/Cart.vue";
+import CartComponent from "@/components/CartComponent.vue";
+import CardList from "@/components/cards/CardList.vue";
+import CardListSmall from "@/components/cards/CardListSmall.vue";
 
 
 export default [
@@ -22,5 +24,7 @@ export default [
     SubmitButton,
     MyInput,
     QuantityCounter,
-    Cart,
+    CartComponent,
+    CardList,
+    CardListSmall
 ]

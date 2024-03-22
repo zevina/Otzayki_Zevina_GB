@@ -1,0 +1,265 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+
+.card {
+ background: linear-gradient(180deg, $pink-200 0%, white 100%);
+ border-radius: 200px 75px 0 0;
+ padding: 120px 0;
+}
+
+.card-item {
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+ gap: 100px;
+ padding-bottom: 80px;
+ margin: 0 20px;
+
+ &__image {
+  position: relative;
+ }
+
+ &__main-img {
+  max-width: 1076px;
+  border-radius: 150px 55px 55px 55px;
+ }
+
+ &__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ &__info-img {
+  max-width: 366px;
+  margin-bottom: 80px;
+ }
+
+ &__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ &__title {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  @include header-3(white);
+ }
+
+ &__text1 {
+  @include body-text-24($pink-950);
+  text-align: center;
+  max-width: 442px;
+  margin-bottom: 20px;
+ }
+
+ &__text2 {
+  @include body-text-24($pink-950);
+  text-align: left;
+  max-width: 200px;
+  margin-bottom: 40px;
+ }
+
+ &__price {
+  @include header-4($pink-600);
+  margin-bottom: 40px;
+ }
+
+ &__counter {
+  margin-bottom: 40px;
+ }
+
+ &__btn {
+  background-color: $pink-300;
+  border-radius: 40px 0;
+  padding: 20px 46px;
+  width: 320px;
+  height: 88px;
+ }
+}
+
+
+// Desktop view - middle point
+@media (max-width: 1644px) {
+ .card {
+  border-radius: 150px 75px 0 0;
+  padding: 60px 0;
+ }
+ 
+ .card-item {
+  gap: 40px;
+  padding-bottom: 60px;
+ 
+  &__main-img {
+   max-width: 800px;
+   border-radius: 120px 55px 55px 55px;
+  }
+ 
+  &__info-img {
+   max-width: 200px;
+   margin-bottom: 50px;
+  }
+
+  &__text1 {
+   @include body-text-18($pink-950);
+   text-align: center;
+   max-width: 340px;
+   margin-bottom: 20px;
+  }
+ }
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+ .card {
+  border-radius: 200px 75px 0 0;
+  padding: 50px 0;
+ }
+ 
+ .card-item {
+  gap: 50px;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+ 
+  &__main-img {
+   max-width: 740px;
+   border-radius: 150px 55px 55px 55px;
+   margin-top: 40px;
+  }
+ 
+  &__info-img {
+   max-width: 366px;
+   margin-bottom: 0;
+  }
+ 
+  &__info {
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+   align-items: flex-end;
+  }
+ 
+  &__title {
+   position: absolute;
+   bottom: 30px;
+   @include header-4(white);
+  }
+ 
+  &__text1 {
+   @include body-text-18($pink-950);
+   max-width: 320px;
+   margin-bottom: 20px;
+  }
+ 
+  &__text2 {
+   @include body-text-18($pink-950);
+   text-align: left;
+   max-width: 150px;
+   margin-bottom: 20px;
+  }
+ 
+  &__price {
+   @include header-5($pink-600);
+   margin-bottom: 15px;
+  }
+ 
+  &__counter {
+   margin-bottom: 20px;
+  }
+ 
+  &__btn {
+   background-color: $pink-300;
+   border-radius: 40px 0;
+   padding: 10px 0;
+   width: 320px;
+   height: 60px;
+  }
+ }
+}
+
+// Mobile view
+@media (max-width: 960px) {
+
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+ .card {
+  border-radius: 100px 30px 0 0;
+  padding: 30px 0;
+ }
+ 
+ .card-item {
+  gap: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+ 
+  &__main-img {
+   max-width: 300px;
+   border-radius: 80px 30px 30px 30px;
+   margin-top: 20px;
+  }
+ 
+  &__info-img {
+   max-width: 150px;
+   margin-bottom: 20px;
+  }
+
+  &__img {
+   margin: 0 auto;
+  }
+ 
+  &__info {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: flex-end;
+  }
+ 
+  &__title {
+   position: absolute;
+   bottom: 30px;
+   @include header-6(white);
+  }
+ 
+  &__text1 {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   max-width: 300px;
+   margin-bottom: 20px;
+  }
+ 
+  &__text2 {
+   @include body-text-18($pink-950);
+   font-size: 16px;
+   max-width: 140px;
+   margin-bottom: 20px;
+  }
+ 
+  &__price {
+   @include header-5($pink-600);
+   margin-bottom: 15px;
+  }
+ 
+  &__counter {
+   margin-bottom: 20px;
+  }
+ 
+  &__btn {
+   background-color: $pink-300;
+   border-radius: 30px 0;
+   padding: 5px 0;
+   width: 250px;
+   height: 55px;
+
+   &:hover {
+    background-color: $pink-400;
+   }
+  }
+ }
+}
