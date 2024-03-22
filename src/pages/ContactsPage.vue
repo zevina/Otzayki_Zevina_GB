@@ -91,7 +91,7 @@
           <div class="contacts__down">
             <p class="contacts__all_phone">Вы можете написать нам на почту email <a href="mailto:mail@otzayki.ru"><span
                   class="accent-text">mail@otzayki.ru</span></a> <br>или позвонить по
-              телефону <a href="telto:+79138934204"><span class="accent-text">+7 (913) 893-42-04</span></a></p>
+              телефону <a href="telto:+79138934204"><span class="accent-text">+7&nbsp(913)&nbsp893-42-04</span></a></p>
           </div>
         </div>
       </div>
