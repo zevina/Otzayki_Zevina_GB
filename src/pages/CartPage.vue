@@ -1,4 +1,10 @@
 <template>
+  <div class="cart-content">
+    <div class="cart center">
+      <cart-component></cart-component>
+      <order-form></order-form>
+    </div>
+  </div>
   <div class="delivery-content">
     <div class="delivery center">
       <div class="delivery__left">
@@ -37,8 +43,19 @@
 </template>
 
 <script>
-export default {
+import CartComponent from '@/components/CartComponent.vue';
+import OrderForm from '@/components/forms/OrderForm.vue';
 
+export default {
+  components: {
+    CartComponent,
+    OrderForm
+  },
+  // computed: {
+  //   cartItems() {
+  //     return this.$store.state.cartItems;
+  //   },
+  // }
 }
 </script>
 

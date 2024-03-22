@@ -1,0 +1,125 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+@import "submit";
+
+.order-form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ max-width: 650px;
+
+ &__title {
+  @include header-3($pink-950);
+  margin-bottom: 10px;
+}
+
+&__desc {
+ @include body-text-18($pink-900);
+ margin-bottom: 65px;
+}
+
+&__inputs {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ gap: 40px;
+ margin-bottom: 40px;
+}
+
+&__input {
+ width: 100%;
+ background-color: transparent;
+ border: 2px solid $pink-900;
+ padding: 30px 40px;
+ @include body-text-18($pink-950);
+ 
+ &::placeholder {
+   color: $pink-900;
+ }
+
+ &_up {
+   border-radius: 40px 40px 0 0;
+ }
+
+ &_down {
+   border-radius: 0 0 40px 40px;
+ }
+}
+&__btn {
+ background-color: $pink-300;
+ border-radius: 40px 0;
+ padding: 20px 46px;
+ width: 460px;
+ height: 88px;
+ margin-bottom: 20px;
+
+ &:hover {
+   background-color: $pink-400;
+   cursor: pointer;
+ }
+}
+}
+
+
+// Desktop view - middle point
+@media (max-width: 1644px) {
+ .order-form {
+  max-width: 650px;
+ 
+  &__title {
+   @include header-4($pink-950);
+ }
+ 
+ &__inputs {
+  width: 100%;
+  gap: 30px;
+ }
+ }
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+ .order-form {
+  align-items: center;
+  max-width: 650px;
+ 
+  &__title {
+   @include header-4($pink-950);
+ }
+ 
+ &__inputs {
+  gap: 30px;
+ }
+ 
+ }
+}
+
+// Mobile view
+@media (max-width: 960px) {
+
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+ .order-form {
+  align-items: center;
+  max-width: 330px;
+ 
+  &__title {
+   @include header-5($pink-950);
+ }
+ 
+ &__inputs {
+  font-size: 16px;
+  gap: 30px;
+ }
+
+ &__btn {
+  padding: 0 46px;
+  width: 290px;
+  height: 66px;
+  margin-bottom: 40px;
+  }
+ }
+}

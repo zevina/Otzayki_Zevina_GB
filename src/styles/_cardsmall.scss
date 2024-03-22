@@ -1,0 +1,183 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+
+
+.card-item-small {
+ display: flex;
+ justify-content: space-between;
+ width: 780px;
+ height: 300px;
+ background-color: white;
+ box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.25);
+ margin-bottom: 90px;
+}
+
+.card-item {
+
+ &__left {
+  width: 50%;
+  background-color: $pink-50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ &__img {
+  max-width: 300px;
+ }
+
+ &__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+ }
+
+ &__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 30px;
+ }
+
+ &__name {
+  @include nav-item-t($pink-600);
+  align-self: flex-start;
+  margin: 0 30px 10px;
+ }
+
+ &__price {
+  @include nav-item-t($pink-950);
+  align-self: flex-start;
+  margin: 0 30px 40px;
+ }
+
+ &__counter {
+  // margin:  auto;
+  align-items: center;
+  margin: 0 auto 50px;
+ }
+ 
+
+ &__remove {
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  margin: 5px 5px 0 0;
+
+  &:hover {
+   cursor: pointer;
+  }
+ }
+}
+
+// Desktop view - middle point
+@media (max-width: 1644px) {
+ .card-item-small {
+  width: 650px;
+  // height: 215px;
+ }
+
+  .card-item {
+
+   &__img {
+    max-width: 270px;
+   }
+
+   &__name {
+    margin: 0 5px 10px;
+   }
+  
+   &__price {
+    margin: 0 5px 40px;
+   }
+  }
+  
+
+}
+
+// Tablet view
+@media (max-width: 1200px) {
+ .card-item-small {
+  width: 500px;
+  height: 215px;
+  margin-bottom: 60px;
+ }
+
+  .card-item {
+
+   &__img {
+    max-width: 210px;
+   }
+
+   &__right {
+    grid-template-rows: 35px 70px 110px;
+   }
+
+   &__remove {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+   }
+
+   &__counter {
+    // margin:  auto;
+    align-items: center;
+    margin: 0 auto 30px;
+   }
+  }
+}
+
+// Mobile view
+@media (max-width: 960px) {
+
+
+}
+
+// Mobile - middle point
+@media (max-width: 768px) {
+ .card-item-small {
+  width: 300px;
+  height: 130px;
+  margin-bottom: 50px;
+ }
+
+  .card-item {
+   
+   &__img {
+    max-width: 115px;
+   }
+
+   &__right {
+    grid-template-rows: 20px 40px 70px;
+   }
+
+   &__info {
+    padding: 0 10px;
+    margin-bottom: 10px;
+   }
+  
+
+   &__name, &__price {
+    font-size: 11px;
+    align-self: flex-start;
+    margin: 0;
+   }
+
+   &__remove {
+    top: 0;
+    right: 20px;
+   }
+
+   &__counter {
+    // margin:  auto;
+    align-items: center;
+    margin: 0 auto 12px;
+   }
+  }
+}

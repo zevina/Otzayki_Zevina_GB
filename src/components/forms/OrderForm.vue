@@ -1,12 +1,18 @@
 <template>
-    <div>
-        <h2>Форма заказа</h2>
-        <my-input label="Имя" name="name" v-model="name" />
-        <my-input label="Email" name="email" v-model="email" />
-        <my-input label="Адрес доставки" name="address" v-model="address" />
-
-        <SubmitButton text="Оформить заказ" @submit="submitForm" />
-    </div>
+    <form @submit.prevent class="order-form">
+        <p class="order-form__title">Оформление заказа</p>
+        <p class="order-form__desc">Укажите все необходимые данные для максимально быстрой обработки заказа</p>
+        <div class="order-form__inputs">
+            <my-input class="order-form__input order-form__input_up" label="Имя" name="name" v-model="name"
+                placeholder="Имя" />
+            <my-input class="order-form__input" label="Адрес доставки" name="address" v-model="address"
+                placeholder="Адрес доставки" />
+            <my-input class="order-form__input" label="Телефон" name="phone" v-model="phone" placeholder="Телефон" />
+            <my-input class="order-form__input order-form__input_down" label="Сообщение" name="message"
+                v-model="message" placeholder="Пожелания к заказу" />
+        </div>
+        <SubmitButton class="order-form__btn" text="Отправить" @submit="submitForm">Отправить</SubmitButton>
+    </form>
 </template>
 
 <script>
@@ -22,8 +28,9 @@ export default {
     data() {
         return {
             name: '',
-            email: '',
-            address: ''
+            address: '',
+            phone: '',
+            message: ''
         };
     },
     methods: {
@@ -52,12 +59,15 @@ export default {
             // очистка полей формы
             this.data = {
                 name: '',
-                email: '',
-                address: ''
+                address: '',
+                phone: '',
+                message: ''
             }
         }
     }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/styles/orderform";
+</style>

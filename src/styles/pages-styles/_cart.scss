@@ -3,11 +3,23 @@
 @import "../mixins";
 
 
+.cart-content {
+  background-color: $pink-100;
+  padding: 120px 0;
+  }
+
+.cart {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  margin: 0 15px;
+}
+
 .delivery-content {
- background-color: $pink-50;
- border-radius: 0 0 0 400px;
- padding: 120px 0;
- margin-bottom: 160px;
+  background-color: $pink-50;
+  border-radius: 0 0 0 400px;
+  padding: 120px 0;
+  margin-bottom: 160px;
 }
 
 .delivery {
@@ -17,12 +29,12 @@
   margin: 0 15px;
 
   &__right {
-   max-width: 792px;
+    max-width: 792px;
   }
 
   &__title {
-   @include header-2($pink-950);
-   margin-bottom: 25px;
+    @include header-2($pink-950);
+    margin-bottom: 25px;
   }
 
   &__subtitle {
@@ -62,10 +74,18 @@
     max-width: 480px;
   }
  }
+
+ .cart {
+  gap: 100px;
+}
 }
 
 // Tablet view
 @media (max-width: 1200px) {
+.cart-content {
+  padding: 80px 0;
+  }
+
  .delivery-content {
   border-radius: 0 0 0 250px;
   margin-bottom: 80px;
@@ -77,6 +97,13 @@
   &__right {
     width: 800px;
   }
+}
+
+.cart {
+  flex-direction: column;
+  gap: 100px;
+  margin: auto;
+  align-items: center;
 }
 }
 
@@ -125,42 +152,50 @@
 
 // Mobile - middle point
 @media (max-width: 768px) {
- .delivery-content {
-  border-radius: 0 0 0 80px;
- }
-
- .delivery {
-  margin: auto;
-
-  &__right {
-   max-width: 330px;
+  .cart {
+    gap: 60px;
   }
 
-  &__title {
-   @include header-4($pink-950);
-   margin-bottom: 12px;
+  .cart-content {
+    padding: 40px 0;
+    }
+
+  .delivery-content {
+    border-radius: 0 0 0 80px;
   }
 
-  &__subtitle {
-   @include header-5($pink-950);
-  }
+  .delivery {
+    margin: auto;
 
-  &__text {
-   @include body-text-18($pink-950);
-   font-size: 16px;
-   margin-bottom: 8px;
-  }
+    &__right {
+    max-width: 330px;
+    }
 
-  &__text1 {
-   @include body-text-18($pink-950);
-   font-size: 16px;
-   margin-bottom: 30px;
-  }
+    &__title {
+    @include header-4($pink-950);
+    margin-bottom: 12px;
+    }
 
-  &__list {
-   @include body-text-18($pink-950);
-   font-size: 16px;
-   margin-left: 8px;
+    &__subtitle {
+    @include header-5($pink-950);
+    }
+
+    &__text {
+    @include body-text-18($pink-950);
+    font-size: 16px;
+    margin-bottom: 8px;
+    }
+
+    &__text1 {
+    @include body-text-18($pink-950);
+    font-size: 16px;
+    margin-bottom: 30px;
+    }
+
+    &__list {
+    @include body-text-18($pink-950);
+    font-size: 16px;
+    margin-left: 8px;
+    }
   }
-}
 }
