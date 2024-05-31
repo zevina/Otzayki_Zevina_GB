@@ -131,6 +131,9 @@
     position: absolute;
     bottom: 80px;
     left: 0;
+    &__img {
+      width: 250px;
+    }
   }
 }
 
@@ -157,7 +160,7 @@
     }
 
     &__decor__img {
-      width: 330px;
+      width: 160px;
     }
   }
 }

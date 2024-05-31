@@ -23,7 +23,7 @@
                             <span class='label'>Капучино</span> <span class='price'>160\200 ₽</span>
                         </div>
                         <div class="drinks__content_item">
-                            <span class='label'>Латте</span> <span class='price'>180 ₽</span>
+                            <span class='label'>Латте</span> <span class='price'>150\180 ₽</span>
                         </div>
                         <div class="drinks__content_item">
                             <span class='label'>Флэт Уайт</span> <span class='price'>190 ₽</span>
@@ -100,7 +100,7 @@
                     <br>
                     <br>
                     <div class="desserts__content_item">
-                        <span class='label'>Круассан с форалью</span> <span class='price'>420 ₽</span>
+                        <span class='label'>Круассан с форелью</span> <span class='price'>420 ₽</span>
                     </div>
                     <div class="desserts__content_item">
                         <span class='label'>Круассан с цыпленком</span> <span class='price'>380 ₽</span>
