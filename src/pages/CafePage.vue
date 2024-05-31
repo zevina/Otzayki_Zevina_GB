@@ -78,8 +78,8 @@
     </div>
     <div class="wrapper-desserts">
         <div class="desserts center">
-            <div class="desserts__title">Десерты</div>
-            <div class="desserts__subtitle">для наших любимых сладкоежек</div>
+            <div class="desserts__title">Еда</div>
+            <div class="desserts__subtitle">сладости и круассаны</div>
             <div class="desserts__content">
                 <div class="desserts__content_left">
                     <div class="desserts__content_item">
@@ -92,10 +92,18 @@
                         <span class='label'>Конфета Трюфель</span> <span class='price'>90 ₽</span>
                     </div>
                     <div class="desserts__content_item">
-                        <span class='label'>Меренговый рулет с клубникой</span> <span class='price'>350 ₽</span>
+                        <span class='label'>Меренговый рулет</span> <span class='price'>280 ₽</span>
                     </div>
                     <div class="desserts__content_item">
-                        <span class='label'>Торт морковный</span> <span class='price'>260 ₽</span>
+                        <span class='label'>Торт морковный</span> <span class='price'>280 ₽</span>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="desserts__content_item">
+                        <span class='label'>Круассан с форалью</span> <span class='price'>420 ₽</span>
+                    </div>
+                    <div class="desserts__content_item">
+                        <span class='label'>Круассан с цыпленком</span> <span class='price'>380 ₽</span>
                     </div>
                 </div>
                 <div class="desserts__content_right">
